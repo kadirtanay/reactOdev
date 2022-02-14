@@ -1,0 +1,43 @@
+-  Bu fonksiyon **"async"** olarak tanýmlanmalý ve default olarak dýþa aktarýlmalýdýr. Fonksiyonun içindeki asenkron fonksiyonlar **"await"** ile tanýmlanmalýdýr.
+-  Fonksiyon **Number** tipinde tek parametre alýr. Bu parametre **user id**'yi belirtir.
+-  Fonksiyonun görevi aþaðýdaki endpoint'e giderek parametrede verilen user id ile ilgili kullanýcýnýn verilerini çekmek olmalý. Ýstekleri **"axios"** kütüphanesini kullanarak yapmanýz gerekiyor. Ýsteði yaparken aþaðýdaki endpointin sonundaki rakamý parametrede gelen user id'ile deðiþtirmeniz gerekiyor.
+
+	 [https://jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)
+
+-  Yine ayný fonksiyonun içerisinde ve yine ayný user id için bir de "posts" isteði yapýlmalýdýr.Ýsteði yaparken aþaðýdaki endpoint'in sonundaki rakamý parametrede gelen user id'ile deðiþtirmeniz gerekiyor.
+
+	[https://jsonplaceholder.typicode.com/posts?userId=1](https://jsonplaceholder.typicode.com/posts?userId=1)
+
+-  Artýk elimizde kullanýcý bilgileri ve bu kullanýcýnýn post'larý var. Bu iki veriyi birleþtirip return edin. Birleþtirme sonucunda elinizde aþaðýdaki gibi bir obje bulunmasý gerekiyor.
+
+	```
+	{
+		id: 1,
+		name: "Leanne Graham",
+		username: "Bret",
+		email: "Sincere@april.biz",
+		address: {
+			street: "Kulas Light",
+			suite: "Apt. 556",
+			city: "Gwenborough",
+			zipcode: "92998-3874",
+			geo: {
+				lat: "-37.3159",
+				lng: "81.1496"
+			}
+		},
+		phone: "1-770-736-8031 x56442",
+		website: "hildegard.org",
+		company: {
+			name: "Romaguera-Crona",
+			catchPhrase: "Multi-layered client-server neural-net",
+			bs: "harness real-time e-markets"
+		},
+		posts: [{
+			userId: 1,
+			id: 1,
+			title: "sunt aut facere repellat",
+			body: "quia et suscipit suscipit recusandae"
+		}]
+	}
+	```
